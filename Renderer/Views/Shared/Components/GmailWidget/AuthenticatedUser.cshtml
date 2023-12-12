@@ -1,0 +1,28 @@
+﻿@using Renderer.Entities;
+
+@model GmailWidgetEntity;
+
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/themes/7.0.2/default/default-main.css" />
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://unpkg.com/jszip/dist/jszip.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2023.3.1114/js/kendo.all.min.js"></script>
+<script src="./kendo-ui-license.js"></script>
+
+<script type="module" src="~/js/gmail-widget/authenticated-user.js" section-name="Bottom" assembly-ref="Renderer"></script>
+
+<div class="container">
+    @* TODO: Resource labels *@
+    Recipients:
+    <input id="recipients" type="email" class="form-control" />
+    <br>
+
+    Subject:
+    <input id ="email-subject" type="text" class="form-control" required/>
+    <br>
+
+    Email Body:
+<textarea id="email-body" class="form-control"></textarea>
+    <button id="send-gmail-btn" class="btn btn-info">Send Email</button>
+    <button id="sign-out-btn" class="btn btn-info">Sign Out</button>
+</div>

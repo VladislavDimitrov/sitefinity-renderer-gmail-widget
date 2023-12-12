@@ -1,0 +1,14 @@
+﻿@using Progress.Sitefinity.AspNetCore.Web;
+
+@inject IRenderContext renderContext;
+
+@model string
+
+@if (this.renderContext.IsEdit)
+{
+    <div class="bs-callout bs-callout-danger widget-message">
+        @* TODO: resource labels *@
+        <h4>Incomplete configuration</h4>
+        <em>@Model</em>
+    </div>
+}

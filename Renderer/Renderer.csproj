@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\gmail-widget\authenticated-user.js" />
+    <Content Remove="wwwroot\js\utils\http-utils.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\js\gmail-widget\authenticated-user.js" />
+    <EmbeddedResource Include="wwwroot\js\gmail-widget\unauthenticated-user.js" />
+    <EmbeddedResource Include="wwwroot\js\utils\http-utils.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.Gmail.v1" Version="1.64.0.3231" />
+    <PackageReference Include="Google.Apis.PeopleService.v1" Version="1.64.0.3093" />
+    <PackageReference Include="MimeKit" Version="4.3.0" />
+    <PackageReference Include="Progress.Sitefinity.AspNetCore" Version="15.0.8222.55" />
+    <PackageReference Include="Progress.Sitefinity.AspNetCore.FormWidgets" Version="15.0.8222.55" />
+    <PackageReference Include="Progress.Sitefinity.AspNetCore.Widgets" Version="15.0.8222.55" />
+    <PackageReference Include="Progress.Sitefinity.Renderer" Version="15.0.8222.55" />
+    <PackageReference Include="Progress.Sitefinity.RestSdk" Version="15.0.8222.55" />
+  </ItemGroup>
+
+</Project>
