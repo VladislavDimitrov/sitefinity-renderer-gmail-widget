@@ -10,10 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         recipientsValidator: null,
     };
 
-    //const recipients = $("#recipients");
-    //const subject = document.getElementById('email-subject');
-    //const emailBody = $("#email-body");
-
     // event listeners
     document.getElementById('sign-out-btn')
         ?.addEventListener('click', () => {
